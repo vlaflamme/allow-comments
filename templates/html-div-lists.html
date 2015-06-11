@@ -1,0 +1,32 @@
+
+{% block content %}
+
+<form>
+
+	{% for lesson in lessons %}
+
+		<div class="lesson">
+			<h1> {{ lesson }}</h1>
+
+			{%for sub in sub_topic%}
+
+				<div class="sub-topic">
+					<h2> {{ sub }}</h2>
+					<ul>
+			    		{%for item in sub_topic_list%}
+
+			    			<li>{{ item }}</li>
+
+			    		{%endfor%}
+				    	</ul>
+				</div>
+			
+			{%endfor%}
+
+		</div>
+
+	{% endfor %}
+
+</form>
+
+{% endblock %}

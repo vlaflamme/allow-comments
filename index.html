@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+{% autoescape true %}
+<html>
+  <body>
+
+    <div>
+      <a href="{{ url|safe }}">{{ url_linktext }}</a>
+
+      {% if user %}
+
+        <h2>Notes Added by {{ user }}</h2>
+
+        {% for greeting in greetings %}
+
+          {% if user and user.user_id() == greeting.author.identity %}
+            
+            <p> - {{ greeting.content }}
+            <br>
+          
+          {% endif %}
+        
+        {% endfor %}
+
+        <div>
+          <form action="/sign?guestbook_name={{ guestbook_name }}" method="post">
+              <textarea name="content" rows="3" cols="60"></textarea>
+              
+              <i>{{ blank_entry }}</i>
+
+              <div><input type="submit" value="Enter an Additional Note"></div>
+          </form>
+        </div>
+
+      {% endif %}
+    </div>
+
+  </body>
+</html>
+{% endautoescape %}

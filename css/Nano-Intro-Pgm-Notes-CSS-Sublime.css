@@ -1,0 +1,73 @@
+/* defines universal styling */
+* {
+	font: Times;
+	background-color: Beige;
+}
+
+/* begin adding box and border styling */
+div {
+	padding: 10px;
+	margin: 20px;
+	border-radius: 10px;
+	-webkit-border-radius: 10px;
+}
+
+div.det-topic {
+	border-width: 5px;
+	border-style: groove;
+	border-color: green;
+	}
+
+div.lesson {
+	border-width: 5px;
+	border-style: solid;
+	border-color: green;
+}
+
+div.sub-topic {
+	border-width: 5px;
+	border-style: double;
+	border-color: green;
+}
+
+div.top-page {
+	border-width: 2px;
+	border-style: outset;
+	border-color: gray;
+	color: DarkGreen;
+	display: -webkit-flex;
+	display: flex;
+	font-size: 150%;
+	font-style: italic;
+}
+
+h1 {
+	font-size: 150%;
+	color: blue;
+}
+
+h2 {
+	color: orange;
+	font: Arial;
+	font-size: 125%;
+	font-style: italic;
+	text-decoration: underline;
+}
+
+h3 {
+	font: Georgia;
+	font-size: 100%;
+	color: DarkCyan;
+}
+
+/* defines how the size of the image will be displayed */
+.images {
+	width: 370px;
+	height: 175px;
+}
+
+/* defines how to highlight key terms or ideas */
+strong {
+	color: Brown;
+	font-weight: bold;
+}
